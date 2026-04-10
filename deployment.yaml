@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-registration-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: event-registration-app
+  template:
+    metadata:
+      labels:
+        app: event-registration-app
+    spec:
+      containers:
+        - name: event-registration-app
+          image: kevinabraham28/event-registration-app:latest
